@@ -1,0 +1,36 @@
+#contact {
+  background-color: lighten($dark-grey, 50%);
+  padding-bottom: 3em;
+  h2 {
+    color: $coral;
+    padding-top: .5em;
+  }
+  #form {
+    margin: 0 auto;
+    max-width: 60%;
+    .input-group {
+      margin: 5px 0 1.5em;
+      .full {
+        width: 100%;
+      }
+      input, textarea {
+        border: .5px solid lighten($dark-grey, 25%);
+        border-radius: 3px;
+        outline: none;
+        padding: .75em;
+        &:focus {
+          border: .5px solid darken($yellow, 10%);
+          box-shadow: 0 0 5px $yellow;
+        }
+      }
+      textarea {
+        max-height: 20em;
+        max-width: 100%;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

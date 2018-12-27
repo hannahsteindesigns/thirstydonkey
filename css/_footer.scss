@@ -1,0 +1,10 @@
+#footer {
+  background-color: $aqua;
+  color: #FFF;
+  padding: 2em;
+  .wrapper {
+    div:first-child {
+      margin-bottom: 1em;
+    }
+  }
+}

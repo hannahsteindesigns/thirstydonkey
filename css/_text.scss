@@ -1,0 +1,105 @@
+// text
+%heading {
+  font-family: $hand;
+  font-weight: bold;
+  margin: .5em 0 1em;
+}
+h1 {
+  @extend %heading;
+  font-size: 3em;
+}
+h2 {
+  @extend %heading;
+  font-size: 2.5em;
+}
+h3 {
+  @extend %heading;
+  font-size: 1.75em;
+}
+h4 {
+  @extend %heading;
+  font-size: 1.5em;
+}
+h5 {
+  @extend %heading;
+  font-size: 1em;
+}
+h6 {
+  @extend %heading;
+  font-family: $sans;
+  font-size: 1em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  &.small {
+    font-size: .75em;
+    line-height: 1em;
+  }
+  &.large {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+
+// links
+a {
+  border-bottom: 1px dotted transparent;
+  color: $coral;
+  opacity: 1;
+  text-decoration: none;
+  transition: border .3s, opacity .3s;
+  &:hover, &:focus, &:active {
+    border-color: $coral;
+    opacity: .75;
+    outline: none;
+    transition: border .3s, opacity .3s;
+  }
+  header & {
+    color: $coral;
+  }
+}
+
+// aside
+aside.borders {
+  text-align: center;
+  width: 100%;
+  a {
+    transition: color 500ms;
+    h5 {
+      padding: .25em;
+      margin: 1em;
+    }
+    &:hover, &:focus, &:active {
+      transition: color 500ms;
+    }
+  }
+}
+
+// text-align
+@include justify(left);
+@include justify(center);
+@include justify(right);
+
+// helpers
+.stress {
+  color: $coral;
+  font-weight: bold;
+}
+.note {
+  font-style: italic;
+  font-size: .875em !important;
+  margin: 1em 0;
+}
+.nobreak {
+  white-space: nowrap;
+}
+.break {
+  display: block;
+  @include responsiveMin(35em) {
+    display: inline;
+  }
+}

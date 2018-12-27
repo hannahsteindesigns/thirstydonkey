@@ -1,0 +1,38 @@
+#menu {
+  h2 {
+    color: $coral;
+    border-top: 1px solid $dark-grey;
+    padding-top: .5em;
+  }
+  section {
+    margin-bottom: 4em;
+    .grid {
+      justify-content: flex-start;
+      .menuItem {
+        @include flexbox($justify-content: start, $align-items: baseline);
+        margin-bottom: 1em;
+        .name {
+          flex: 0 1 50%;
+          font-size: 1.15em;
+          order: 1;
+        }
+        .line {
+          border-bottom: 1px dotted $dark-grey;
+          content: "";
+          flex: 0 1 auto;
+          order: 2;
+        }
+        .price {
+          flex: 0 1 auto;
+          order: 3;
+          text-align: right;
+        }
+        div {
+          flex: 0 1 100%;
+          margin-top: .5em;
+          order: 4;
+        }
+      }
+    }
+  }
+}

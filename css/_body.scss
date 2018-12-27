@@ -1,0 +1,21 @@
+#hero {
+  background-color: $aqua;
+  color: #FFF;
+  font-family: $hand;
+  font-size: 2.5em;
+  padding: 2em;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+#about {
+  padding: 3em;
+  padding-bottom: 1em;
+}
+
+.bar {
+  border-bottom: 1px solid $aqua;
+  margin-bottom: 1.5em;
+}

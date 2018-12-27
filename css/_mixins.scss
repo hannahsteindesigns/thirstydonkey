@@ -1,0 +1,39 @@
+@mixin flexbox($justify-content: space-between, $align-items: flex-start, $flow: row wrap) {
+  align-items: $align-items;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify-content;
+}
+
+@mixin justify($direction) {
+  .text-#{$direction} {
+    text-align: $direction;
+  }
+}
+
+// @mixin color($area, $color) {
+//   .#{$area}-#{$color}{
+//     @if($area == "text") {
+//       color: $color;
+//     } @else if ($area == "background") {
+//       background-color: $color;
+//     }
+//   }
+// }
+
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+  }
+}
+
+@mixin responsiveMin($minWidth) {
+  @media (min-width: $minWidth) {
+    @content;
+  }
+}

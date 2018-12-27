@@ -1,0 +1,133 @@
+/* ===== Thirsty Donkey Styles ===== */
+
+@import "mixins";
+@import "reset";
+
+// colors
+$aqua: #339999;
+$brown: #5A422F;
+$coral: #FB434F;
+$dark-grey: #666;
+$light-grey: #F9F9F9;
+$yellow: #FDDE34;
+
+.text-aqua {
+  color: $aqua;
+}
+.text-brown {
+  color: $brown;
+}
+// other colors & background
+.background-aqua {
+  background-color: $aqua;
+}
+.background-coral {
+  background-color: $coral;
+}
+
+// fonts
+$sans: "Lato", Helvetica, Arial, sans-serif;
+$hand: 'Gochi Hand', sans-serif;
+
+// base
+body {
+  box-sizing: border-box;
+  color: $dark-grey;
+  font: normal 14px $sans;
+  margin: 0;
+}
+::selection {
+  background-color: lighten($yellow, 5%);
+  color: $dark-grey;
+}
+::-moz-selection {
+  background-color: lighten($yellow, 5%);
+  color: $dark-grey;
+}
+.width {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 92%;
+  @include responsiveMin(85em) {
+    width: 100%;
+  }
+}
+
+// buttons
+button,
+.button {
+  background-color: $coral;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+  color: #FFF;
+  cursor: pointer;
+  letter-spacing: .5px;
+  padding: 1em 1.25em;
+  transition: all .5s;
+  &:hover, &:focus, &:active {
+    background-color: lighten($coral, 10%);
+    color: #FFF;
+    transition: all .5s;
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+// helpers
+.l-show {
+  display: none;
+  @include responsiveMin(60em) {
+    display: inline-block;
+  }
+}
+.margin {
+  &-top {
+    &-10 {
+      margin-top: 1em;
+    }
+    &-20 {
+      margin-top: 2em;
+    }
+  }
+  &-bottom {
+    &-10 {
+      margin-bottom: 1em;
+    }
+    &-20 {
+      margin-bottom: 2em;
+    }
+  }
+}
+.display {
+  &-block {
+    display: block;
+  }
+  &-hidden {
+    display: none;
+  }
+}
+.float {
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+  &-none {
+    float: none;
+  }
+}
+
+// page styles
+@import "grid";
+@import "animate";
+@import "text";
+@import "header";
+@import "body";
+@import "menu";
+@import "contact";
+@import "gallery";
+@import "footer";
+
+/* == Do not mistake temptation for opportunity. == */
